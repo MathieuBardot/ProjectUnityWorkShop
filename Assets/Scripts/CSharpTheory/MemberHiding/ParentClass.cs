@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace CSHarpTheory.MemberHidding
 {
-    public class ParentClass 
+    public class ParentClass
     {
-        public string Name;
+        public virtual string Name { get { return "parent"; } }
     }
 }

@@ -6,6 +6,6 @@ namespace CSHarpTheory.MemberHidding
 {
     public class ChildClass : ParentClass
     {
-        public string Name ;
+        public override string Name { get { return "child"; } }
     }
 }
