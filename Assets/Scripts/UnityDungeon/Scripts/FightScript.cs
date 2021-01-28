@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 namespace UnityDungeon
 {
+    public class EndFightEvent : UnityEvent<bool> {}
     public class FightScript : MonoBehaviour
     {
         public TextMeshProUGUI textMesh;
@@ -34,8 +36,14 @@ namespace UnityDungeon
 
         private FightState state;
 
+        public EndFightEvent onFightEnd;
+        void Awake()
+        {
+            onFightEnd = new EndFightEvent();
+        }
+
         // Start is called before the first frame update
-        IEnumerator Start()
+        public IEnumerator StartFight()
         {
             panelAnimator.SetBool("PanelActive",true);
             state = FightState.BEGIN;
@@ -159,6 +167,7 @@ namespace UnityDungeon
             yield return StartCoroutine(ChangeText(won ? "Vous avez gagné !" : " Vous avez perdu !"));
             yield return new WaitForSeconds(2.0f);
             panelAnimator.SetBool("PanelActive", false);
+            onFightEnd.Invoke(won);
         }
     }
 }

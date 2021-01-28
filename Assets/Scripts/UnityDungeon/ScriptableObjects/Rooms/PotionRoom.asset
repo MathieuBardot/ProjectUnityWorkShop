@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f18fcfe01a30c4c8bc1d864101fa8c, type: 3}
+  m_Name: PotionRoom
+  m_EditorClassIdentifier: 
+  occupant: {fileID: 11400000, guid: 700e38e9025d0f84da75cae3a8012910, type: 2}
+  roomLeft: {fileID: 11400000, guid: ac580579422872b46b30285358f77adf, type: 2}
+  roomRight: {fileID: 0}
+  description: "Vous aboutissez sur une pi\xE8ce assez accueillante. Il ya une potion
+    sur la table en face de vous."

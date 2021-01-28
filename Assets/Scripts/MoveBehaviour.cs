@@ -63,14 +63,19 @@ public class MoveBehaviour : MonoBehaviour
         //IMyInterface attacker = new Attacker();
         //attacker.Attack();
 
-        Enumerator enumerators = new Enumerator();
+        /*Enumerator enumerators = new Enumerator();
         IEnumerator enumerator = enumerators.myEnumerator();
         while (true){
             if (enumerator.MoveNext())
                 Debug.Log(enumerator.Current);
             else
                 break;
-        }
+        }*/
+
+        //Delegate d = new Delegate();
+
+        Lists l = new Lists();
+        l.initialize();
     }
 
     // Update is called once per frame
